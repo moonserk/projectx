@@ -1,8 +1,10 @@
-deploy:
+run:
 	sudo docker-compose up
-startdb:
+run_detach:
+	sudo docker-compose up -d
+run_db:
 	cd ./db && sudo docker-compose up
-spring:
+run_server:
 	cd ./server && ./mvnw spring-boot:run
-startgui:
+run_client:
 	cd ./client && mvn clean javafx:run
